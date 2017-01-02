@@ -81,6 +81,11 @@ public class DrawingView extends View {
         return paint;
     }
 
+    public void clear() {
+        drawActions.clear();
+        postInvalidate();
+    }
+
     private static class DrawAction {
         private final Path path;
         private final Paint paint;

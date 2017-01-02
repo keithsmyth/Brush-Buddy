@@ -39,34 +39,36 @@ public class DrawingActivity extends AppCompatActivity {
         bottomSheetFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final int state =  bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED
+                final int state = bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED
                         ? BottomSheetBehavior.STATE_EXPANDED
                         : BottomSheetBehavior.STATE_COLLAPSED;
                 bottomSheetBehavior.setState(state);
             }
         });
-    }
-
-    @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        //rootView.post(new EnsureBottomSheetHeightRunnable(rootView, bottomSheetLayout));
         initBottomSheet();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.drawing_menu, menu);
-        final Drawable undoDrawable = menu.findItem(R.id.action_undo).getIcon();
-        undoDrawable.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+        for (int id : new int[]{R.id.action_undo, R.id.action_save}) {
+            final Drawable undoDrawable = menu.findItem(id).getIcon();
+            undoDrawable.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+        }
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_undo) {
-            drawingView.undo();
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_save:
+                return true;
+            case R.id.action_undo:
+                drawingView.undo();
+                return true;
+            case R.id.action_clear:
+                drawingView.clear();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -90,25 +92,6 @@ public class DrawingActivity extends AppCompatActivity {
                 }
             });
             flexboxLayout.addView(button);
-//            final FlexboxLayout.LayoutParams params = (FlexboxLayout.LayoutParams) button.getLayoutParams();
-//            params.flexGrow =
-        }
-    }
-
-    private static class EnsureBottomSheetHeightRunnable implements Runnable {
-
-        private final View rootView;
-        private final View bottomSheetView;
-
-        EnsureBottomSheetHeightRunnable(View rootView, View bottomSheetView) {
-            this.rootView = rootView;
-            this.bottomSheetView = bottomSheetView;
-        }
-
-        @Override
-        public void run() {
-            bottomSheetView.getLayoutParams().height = (int) (rootView.getHeight() * 0.4);
-            bottomSheetView.requestLayout();
         }
     }
 }

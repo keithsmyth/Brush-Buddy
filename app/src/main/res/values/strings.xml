@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Brush Buddy</string>
     <string name="menu_undo">Undo</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_redo">Redo</string>
+    <string name="menu_clear">Clear</string>
 </resources>
