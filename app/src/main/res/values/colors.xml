@@ -3,4 +3,35 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="brush_red">#F44336</color>
+    <color name="brush_pink">#E91E63</color>
+    <color name="brush_purple">#9C27B0</color>
+    <color name="brush_indigo">#3F51B5</color>
+    <color name="brush_blue">#2196F3</color>
+    <color name="brush_teal">#009688</color>
+    <color name="brush_green">#4CAF50</color>
+    <color name="brush_yellow">#FFEB3B</color>
+    <color name="brush_orange">#FF9800</color>
+    <color name="brush_brown">#795548</color>
+    <color name="brush_grey">#9E9E9E</color>
+    <color name="brush_blue_grey">#607D8B</color>
+
+    <array name="brushes">
+        <item>@android:color/black</item>
+        <item>@android:color/white</item>
+        <item>@color/brush_red</item>
+        <item>@color/brush_pink</item>
+        <item>@color/brush_purple</item>
+        <item>@color/brush_indigo</item>
+        <item>@color/brush_blue</item>
+        <item>@color/brush_teal</item>
+        <item>@color/brush_green</item>
+        <item>@color/brush_yellow</item>
+        <item>@color/brush_orange</item>
+        <item>@color/brush_brown</item>
+        <item>@color/brush_grey</item>
+        <item>@color/brush_blue_grey</item>
+    </array>
+
 </resources>

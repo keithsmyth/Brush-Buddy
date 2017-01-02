@@ -77,7 +77,7 @@ public class DrawingActivity extends AppCompatActivity {
         flexboxLayout.setFlexDirection(FlexboxLayout.FLEX_DIRECTION_ROW);
         flexboxLayout.setFlexWrap(FlexboxLayout.FLEX_WRAP_WRAP);
         final int buttonSize = getResources().getDimensionPixelSize(R.dimen.drawing_button_size);
-        final int[] colors = new int[]{Color.BLACK, Color.RED, Color.GREEN, Color.BLUE, Color.MAGENTA, Color.WHITE, Color.CYAN, Color.DKGRAY};
+        final int[] colors = getResources().getIntArray(R.array.brushes);
         for (final int color : colors) {
             final Button button = new Button(this);
             button.setHeight(buttonSize);
