@@ -1,4 +1,4 @@
-package com.keithsmyth.brushbuddy;
+package com.keithsmyth.brushbuddy.view;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.android.flexbox.FlexboxLayout;
+import com.keithsmyth.brushbuddy.R;
 
 public class DrawingActivity extends AppCompatActivity {
 

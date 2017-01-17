@@ -1,4 +1,4 @@
-package com.keithsmyth.brushbuddy;
+package com.keithsmyth.brushbuddy.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

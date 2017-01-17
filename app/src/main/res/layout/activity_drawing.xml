@@ -7,9 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="com.keithsmyth.brushbuddy.DrawingActivity">
+    tools:context="com.keithsmyth.brushbuddy.view.DrawingActivity">
 
-    <com.keithsmyth.brushbuddy.DrawingView
+    <com.keithsmyth.brushbuddy.view.DrawingView
         android:id="@+id/drawing_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
